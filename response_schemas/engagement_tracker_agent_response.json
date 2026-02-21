@@ -1,0 +1,62 @@
+{
+  "agent_name": "Engagement Tracker Agent",
+  "agent_id": "6998f444eede22c580c0159c",
+  "description": "Analyzes outreach campaign performance -- acceptance rates, response rates, message engagement by segment. Identifies top-performing message variations and recommends adjustments to messaging strategy.",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "metrics": {
+      "acceptance_rate": "number",
+      "response_rate": "number",
+      "avg_response_time_hours": "number",
+      "best_performing_segment": "string",
+      "total_sent": "number",
+      "total_accepted": "number",
+      "total_replied": "number"
+    },
+    "segment_breakdown": [
+      {
+        "segment_name": "string",
+        "sent": "number",
+        "accepted": "number",
+        "replied": "number",
+        "conversion_rate": "number"
+      }
+    ],
+    "recommendations": [
+      {
+        "recommendation": "string",
+        "impact": "string",
+        "priority": "string"
+      }
+    ]
+  },
+  "example_response": {
+    "metrics": {
+      "acceptance_rate": 0,
+      "response_rate": 0,
+      "avg_response_time_hours": 0,
+      "best_performing_segment": "sample string",
+      "total_sent": 0,
+      "total_accepted": 0,
+      "total_replied": 0
+    },
+    "segment_breakdown": [
+      {
+        "segment_name": "sample string",
+        "sent": 0,
+        "accepted": 0,
+        "replied": 0,
+        "conversion_rate": 0
+      }
+    ],
+    "recommendations": [
+      {
+        "recommendation": "sample string",
+        "impact": "sample string",
+        "priority": "sample string"
+      }
+    ]
+  }
+}

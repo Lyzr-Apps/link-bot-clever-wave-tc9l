@@ -1,0 +1,48 @@
+{
+  "workflow": "LinkedIn ICP Outreach Automation",
+  "pattern": "multiple_independent_agents",
+  "agents": [
+    {
+      "node_id": "icp_discovery_agent",
+      "agent_id": "6998f4431e2ec8b5186f7c5f",
+      "name": "ICP Discovery Agent",
+      "provider": "perplexity",
+      "model": "sonar-pro",
+      "temperature": 0.3,
+      "top_p": 1,
+      "trigger": "Discover Prospects",
+      "screen": "Discovery Screen",
+      "capabilities": ["text"],
+      "response_schema_file": "response_schemas/icp_discovery_agent_response.json"
+    },
+    {
+      "node_id": "outreach_messaging_agent",
+      "agent_id": "6998f4431e2ec8b5186f7c61",
+      "name": "Outreach & Messaging Agent",
+      "provider": "openai",
+      "model": "gpt-4.1",
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "trigger": "Launch Outreach",
+      "screen": "Outreach Screen",
+      "capabilities": ["text"],
+      "response_schema_file": "response_schemas/outreach_messaging_agent_response.json"
+    },
+    {
+      "node_id": "engagement_tracker_agent",
+      "agent_id": "6998f444eede22c580c0159c",
+      "name": "Engagement Tracker Agent",
+      "provider": "openai",
+      "model": "gpt-4.1",
+      "temperature": 0.4,
+      "top_p": 1,
+      "trigger": "Analyze Engagement",
+      "screen": "Analytics Screen",
+      "capabilities": ["text"],
+      "response_schema_file": "response_schemas/engagement_tracker_agent_response.json"
+    }
+  ],
+  "rag_ids": [],
+  "schedule_ids": [],
+  "schedules": []
+}

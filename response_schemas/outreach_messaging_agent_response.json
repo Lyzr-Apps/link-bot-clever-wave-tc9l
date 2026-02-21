@@ -1,0 +1,54 @@
+{
+  "agent_name": "Outreach & Messaging Agent",
+  "agent_id": "6998f4431e2ec8b5186f7c61",
+  "description": "Generates personalized connection request notes and follow-up message sequences based on prospect profile data (job title, company, activity). Applies segment-specific templates (e.g., CEO vs. Marketing Director). Schedules messages with configurable time delays to appear natural. Executes outreach via LinkedIn custom integration.",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "outreach_results": [
+      {
+        "prospect_name": "string",
+        "segment": "string",
+        "connection_note": "string",
+        "follow_up_messages": [
+          {
+            "sequence_number": "number",
+            "message": "string",
+            "delay_days": "number"
+          }
+        ],
+        "status": "string",
+        "personalization_notes": "string"
+      }
+    ],
+    "campaign_summary": {
+      "total_outreach": "number",
+      "requests_queued": "number",
+      "estimated_completion": "string"
+    }
+  },
+  "example_response": {
+    "outreach_results": [
+      {
+        "prospect_name": "sample string",
+        "segment": "sample string",
+        "connection_note": "sample string",
+        "follow_up_messages": [
+          {
+            "sequence_number": 0,
+            "message": "sample string",
+            "delay_days": 0
+          }
+        ],
+        "status": "sample string",
+        "personalization_notes": "sample string"
+      }
+    ],
+    "campaign_summary": {
+      "total_outreach": 0,
+      "requests_queued": 0,
+      "estimated_completion": "sample string"
+    }
+  }
+}

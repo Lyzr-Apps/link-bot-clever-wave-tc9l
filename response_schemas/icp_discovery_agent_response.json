@@ -1,0 +1,46 @@
+{
+  "agent_name": "ICP Discovery Agent",
+  "agent_id": "6998f4431e2ec8b5186f7c5f",
+  "description": "Discovers and qualifies LinkedIn prospects matching user-defined ICP criteria (industry, title, company size, keywords). Enriches profiles with publicly available company/industry context using web search. Returns a ranked prospect list with relevance scores and profile summaries.",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "prospects": [
+      {
+        "name": "string",
+        "title": "string",
+        "company": "string",
+        "industry": "string",
+        "company_size": "string",
+        "location": "string",
+        "relevance_score": "number",
+        "profile_summary": "string",
+        "linkedin_url": "string",
+        "suggested_segment": "string",
+        "personalization_rationale": "string"
+      }
+    ],
+    "total_found": "number",
+    "search_criteria_summary": "string"
+  },
+  "example_response": {
+    "prospects": [
+      {
+        "name": "sample string",
+        "title": "sample string",
+        "company": "sample string",
+        "industry": "sample string",
+        "company_size": "sample string",
+        "location": "sample string",
+        "relevance_score": 0,
+        "profile_summary": "sample string",
+        "linkedin_url": "sample string",
+        "suggested_segment": "sample string",
+        "personalization_rationale": "sample string"
+      }
+    ],
+    "total_found": 0,
+    "search_criteria_summary": "sample string"
+  }
+}
